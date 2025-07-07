@@ -1,0 +1,103 @@
+:root {
+    --bgcolor:  #fdfdff;
+    --lightblack: #393d3f;
+    --beige: #c6c5b9;
+    --teal: #62929e;
+    --tteal: #62929e99;
+    --blue: #546a7b;
+}
+
+@font-face {
+    font-family: "Outfit";
+    src: url(fonts/outfit/Outfit-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bgcolor);
+    font-family: "Outfit";
+}
+
+section {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+#home {
+    height: 100vh;
+    overflow-y: hidden;
+    color: var(--blue);
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F79%2F4b%2F54%2F794b545d6ce3bd7c8f65872926ea5aef.jpg&f=1&nofb=1&ipt=bc2721c50dd7e57479a095d7298f4d74ffb508fa6f6c88066193c70463594a2d");
+}
+
+/* #overlay {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--tteal);
+  z-index: 1;
+} */
+
+#navbar {
+    background-color: var(--tteal);
+    height: 75px;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 25px;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-left: 40px;
+}
+
+#logo-link {
+    text-decoration: none;
+}
+
+.logo:hover {
+    cursor: pointer;
+}
+
+nav {
+    float: right;
+    margin-left: 750px;
+}
+
+nav ul li {
+    text-decoration: none;
+    display: inline-block;
+}
+
+nav ul li a {
+    color: var(--blue);
+    text-decoration: none;
+    margin: 25px;
+    font-size: 25px;
+}
+
+nav ul li a:hover {
+    color: var(--teal);
+}
+
+#home {
+    text-align: center;
+}
+
+#title {
+    font-size: 100px;
+    margin: auto;
+    margin-top: 225px;
+    text-transform: uppercase;
+    
+}
+
+#slogan {
+    font-size: 50px;
+    font-weight: lighter;
+}
