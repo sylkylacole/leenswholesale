@@ -9,24 +9,23 @@
 </head>
 <body>
     <section id="landing">
-        <header id="navbar">
-                <a href="www.leenswholesale.com" id="logo-link"><h4 class="logo">Leens Wholesale</h4></a>
+        <header class="navbar" id="index-navbar">
+                <a href="www.leenswholesale.com" id="logo-link"><h4 class="logo" id="landing-link">Leens Wholesale</h4></a>
                 <nav>
                     <ul>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="order.html">Order</a></li>
+                        <li><a href="#about" class="landing-nav">About</a></li>
+                        <li><a href="products.html" class="landing-nav">Products</a></li>
+                        <li><a href="order.html" class="landing-nav">Order</a></li>
                     </ul>
                 </nav>
         </header>
         <div id="home">
-            
             <h1 id="title">Leens Wholesale</h1><br>
             <h3 id="slogan">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
             <!-- <div id="overlay"></div> -->
         </d>
     </section>
-    <a href="#landing"><div class="back-to-top"></div></a> <!-- Not sure if this should be included inside of a section or remain outside of it-->
+    <button onClick="window.alert('Clicked')" class="back-to-top" title="Go to top">&#8593;</button>
     <section id="about-featured">
         <div id="about">
             <h1 class="page-header">About</h1>
@@ -39,24 +38,26 @@
         
         <div id="featured">
             <h1 class="page-header">Featured Products</h1>
-            <div class="feat-product" id="left-product">
-                <img src="https://placehold.co/200x200" alt="" id="left-img" class="feat-prod-img">
-                <p id="left-prod-name" class="feat-prod-name">Product 1</p>
-            </div>
-            <div class="feat-product" id="middle-product">
-                <img src="https://placehold.co/200x200" alt="" id="middle-img" class="feat-prod-img">
-                <p id="middle-prod-name" class="feat-prod-name">Product 2</p>
-            </div>
-            <div class="feat-product" id="right-product">
-                <img src="https://placehold.co/200x200" alt="" id="right-img" class="feat-prod-img">
-                <p id="right-prod-name" class="feat-prod-name">Product 3</p>
+            <div id="feat-products-sec">
+                    <div class="feat-product" id="left-product">
+                    <img src="https://placehold.co/200x200" alt="" id="left-img" class="feat-prod-img">
+                    <p id="left-prod-name" class="feat-prod-name">Product 1</p>
+                </div>
+                <div class="feat-product" id="middle-product">
+                    <img src="https://placehold.co/200x200" alt="" id="middle-img" class="feat-prod-img">
+                    <p id="middle-prod-name" class="feat-prod-name">Product 2</p>
+                </div>
+                <div class="feat-product" id="right-product">
+                    <img src="https://placehold.co/200x200" alt="" id="right-img" class="feat-prod-img">
+                    <p id="right-prod-name" class="feat-prod-name">Product 3</p>
+                </div>
             </div>
             <h5 class="bottom-text">To see more, visit <a href="products.html">here!</a></h5>
         </div>
     </section>
     <section id="footer">
-        <img src="" alt="" class="">
-        <h4 class="logo">Leens Wholesale</h4>
+        <img src="https://placehold.co/50x50" alt="" class="footer-img">
+        <a href="www.leenswholesale.com"><h4 class="logo" id="footer-logo">Leens Wholesale</h4></a>
         <nav class="footer-nav">
             <ul>
                 <li><a href="#about">About</a></li>

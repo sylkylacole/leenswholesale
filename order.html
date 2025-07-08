@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <header id="navbar">
+    <header class="navbar">
                 <h4 class="logo">Leens Wholesale</h4>
                 <nav>
                     <ul>
@@ -18,7 +18,7 @@
                     </ul>
                 </nav>
     </header>
-    <a href=""><div class="back-to-top"></div></a> <!-- Not sure if this should be included inside of a section or remain outside of it-->
+    <button onClick="window.alert('Clicked')" class="back-to-top" title="Go to top">&#8593;</button>
     <h1 class="page-header">Place Order</h1>
     <h3 class="page-subheader">Use the form below to inquire of the products we have available</h3>
     <section id="order">
@@ -56,11 +56,11 @@
         </div>
     </section>
     <section id="footer">
-        <img src="" alt="" class="">
-        <h4 class="logo">Leens Wholesale</h4>
+        <img src="https://placehold.co/50x50" alt="" class="footer-img">
+        <a href="www.leenswholesale.com"><h4 class="logo" id="footer-logo">Leens Wholesale</h4></a>
         <nav class="footer-nav">
             <ul>
-                <li><a href="index.html/#about">About</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="products.html">Products</a></li>
                 <li><a href="order.html">Order</a></li>
             </ul>
