@@ -26,7 +26,8 @@ body {
 
 section {
     width: 100vw;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
+    overflow-x: scroll;
 }
 
 
@@ -281,4 +282,61 @@ nav ul li a:hover {
 
 .prod-img {
     border-radius: 25px;
+}
+
+/* Order */
+
+#order {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    /* Vertically center children */
+    align-items: center;        /* Horizontally center children */
+    min-height: 80vh;
+    height: auto;
+    position: relative;
+}
+
+#form {
+    margin-top: 75px;
+}
+
+.form-section {
+    margin-bottom: 50px;
+}
+
+label {
+    margin-right: 50px;
+    font-size: 20px;
+}
+
+input[type=text], input[type=tel], input[type=email],  input[type=number], textarea {
+    background-color: var(--beige);
+    color: var(--bgcolor);
+    font-family: "Outfit";
+    border: none;
+    border-radius: 15px;
+    height: 30px;
+    width: 250px;
+    padding: 17px;
+    text-align: center;
+}
+
+input[type=text]:focus, input[type=tel];:focus, input[type=email]:focus,  input[type=number]:focus, textarea:focus {
+    border-color: var(--blue);
+}
+
+input[type=submit] {
+    text-align: center;
+    border: none;
+    border-radius: 15px;
+    color: var(--beige);
+    background-color: var(--blue);
+    width: 150px;
+    height: 35px;
+}
+
+input[type=submit]:hover {
+    cursor: pointer;
+    background-color: var(--beige);
+    color: var(--blue);
 }
