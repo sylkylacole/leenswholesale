@@ -6,6 +6,7 @@
     <title>Leens Wholesale</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script src="script.js"></script>
 </head>
 <body>
     <section id="landing">
@@ -13,7 +14,7 @@
                 <a href="index.html" id="logo-link"><h4 class="logo" id="landing-link">Leens Wholesale</h4></a>
                 <nav>
                     <ul>
-                        <li><a href="#about" class="landing-nav">About</a></li>
+                        <li><a href="#contact" class="landing-nav">Contact</a></li>
                         <li><a href="products.html" class="landing-nav">Products</a></li>
                         <li><a href="order.html" class="landing-nav">Order</a></li>
                     </ul>
@@ -21,12 +22,12 @@
         </header>
         <div id="home">
             <h1 id="title">Leens Wholesale</h1><br>
-            <h3 id="slogan">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+            <!-- <h3 id="slogan">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3> -->
             <!-- <div id="overlay"></div> -->
         </d>
     </section>
-    <button onClick="window.alert('Clicked')" class="back-to-top" title="Go to top">&#8593;</button>
-    <section id="about-featured">     
+    <button onClick="topFunction();" class="back-to-top" title="Go to top" id="topButton">&#8593;</button>
+    <section id="contact-featured">     
         <div id="featured">
             <h1 class="page-header">Featured Products</h1>
             <div id="feat-products-sec">
@@ -45,12 +46,16 @@
             </div>
             <h5 class="bottom-text">To see more, visit <a href="products.html">here!</a></h5>
         </div>
-        <div id="about">
-            <h1 class="page-header">About</h1>
-            <div id="about-section">
-                <img src="https://placehold.co/200x200" alt="" id="about-left" class="about-img">
-                <p id="about-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid id a dicta eligendi voluptatem. Vero sequi sint error consequatur aspernatur, repellat facilis nam, quia aut harum reiciendis itaque. Aliquam, reiciendis?</p>
-                <img src="https://placehold.co/200x200" alt="" id="about-right" class="about-img">
+        <div id="contact">
+            <h1 class="page-header">Contact Information</h1>
+            <div id="contact-section">
+                <p class="contact-text">7003 Dollarway Rd. Ste 1, White Hall, AR, 71602</p>
+                <p class="contact-text">Fadi Kharraz - <a href="tel:870-329-5559" class="contact-links">870-329-5559</a></p>
+                <p class="contact-text">Mohammad Kharraz - <a href="tel:870-543-9684" class="contact-links">870-543-9684</a></p>
+                <p class="contact-text"><a href="mailto:leenswholesale@gmail.com" class="contact-links">leenswholesale@gmail.com</a></p>
+                <div id="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3297.50074195243!2d-92.08220888780639!3d34.26128107296673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x862d39710e685ecb%3A0x3e0675ee151d1df1!2s7003%20Dollarway%20Rd%20ste%201%2C%20White%20Hall%2C%20AR%2071602!5e0!3m2!1sen!2sus!4v1752258143894!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
             </div>
         </div>
     </section>
@@ -59,7 +64,7 @@
         <a href="index.html"><h4 class="logo" id="footer-logo">Leens Wholesale</h4></a>
         <nav class="footer-nav">
             <ul>
-                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
                 <li><a href="products.html">Products</a></li>
                 <li><a href="order.html">Order</a></li>
             </ul>

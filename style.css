@@ -108,8 +108,9 @@ nav ul li a:hover {
 #title {
     font-size: 100px;
     margin: auto;
-    margin-top: 225px;
+    position: relative;
     text-transform: uppercase;
+    top: 40%;
     
 }
 
@@ -118,15 +119,15 @@ nav ul li a:hover {
     font-weight: lighter;
 }
 
-/* About-featured */
+/* Contact-featured */
 
-#about-featured {
+#contact-featured {
    display: flex;
    flex-direction: column;
    margin-bottom: 50px;
 }
 
-#about {
+#contact {
     margin-top: 50px;
     justify-content: center;
     margin-bottom: 50px;
@@ -140,27 +141,40 @@ nav ul li a:hover {
     font-weight: lighter;
 }
 
-#about-section {
+#contact-section {
     display: inline-block;
-    display: flex;
     margin-bottom: 25px;
     justify-content: center;
+    margin-left: 42%;
 }
 
-.about-img {
-    border-radius: 25px;
-    margin-right: 50px;
+#map {
+    padding-bottom: 50%;
+    position: relative;
 }
 
-#about-right {
-    margin-right: 0;
+#map iframe {
+     height: 100%;
+     width: 100%;
+     left: 0;
+     top: 0;
+     position: absolute;
 }
 
-#about-text {
+.contact-text {
     width: 20ch;
     text-align: center;
-    margin-right: 50px;
+    margin-bottom: 25px;
     font-size: 20px;
+}
+
+.contact-links {
+    color: var(--teal);
+}
+
+.contact-links:hover {
+    cursor: pointer;
+    color: var(--beige);
 }
 
 #feat-products-sec {
