@@ -280,6 +280,7 @@ nav ul li a:hover {
 #products {
     display: flex;
     flex-direction: column;
+    margin-left: 7.5%;
 }
 
 .row {
