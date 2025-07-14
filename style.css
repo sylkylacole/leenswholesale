@@ -708,6 +708,14 @@ input[type=submit]:hover {
     margin-left: 150px;
   }
 
+  #logo-link, #landing-link {
+    width: 100%;
+  }
+
+  #navMenu {
+    margin-left: 0%;
+  }
+
   .page-header {
     font-size: 70px;
   }
@@ -732,6 +740,14 @@ input[type=submit]:hover {
     margin: 0 auto;
   }
 
+  #logo-link, #landing-link {
+    width: 100%;
+  }
+
+  #navMenu {
+    margin-left: 0%;
+  }
+
   #title {
     font-size: 100px;
   }
@@ -742,6 +758,10 @@ input[type=submit]:hover {
 
   #form {
     margin-left: 200px;
+  }
+
+  #footer ul li a {
+    font-size: 25px;
   }
 }
 
@@ -804,6 +824,5 @@ input[type=submit]:hover {
 
   .footer-nav {
     display: block;
-    
   }
 }
