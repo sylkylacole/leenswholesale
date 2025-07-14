@@ -6,17 +6,24 @@
     <title>Leens Wholesale - Products</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script src="script.js"></script>
 </head>
 <body>
-    <header class="navbar">
-                <a href="index.html" id="logo-link"><h4 class="logo" id="landing-link">Leens Wholesale</h4></a>
-                <nav>
-                    <ul>
-                        <li><a href="#contact" class="landing-nav">Contact</a></li>
-                        <li><a href="products.html" class="landing-nav">Products</a></li>
-                        <li><a href="order.html" class="landing-nav">Order</a></li>
-                    </ul>
-                </nav>
+        <header class="navbar">
+            <a href="index.html" id="logo-link"><h4 class="logo" id="landing-link">Leens Wholesale</h4></a>
+            
+            <!-- Hamburger icon -->
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                &#9776;
+            </button>
+
+            <nav id="navMenu">
+                <ul class="nav-links">
+                <li><a href="index.html#contact" class="landing-nav">Contact</a></li>
+                <li><a href="products.html" class="landing-nav">Products</a></li>
+                <li><a href="order.html" class="landing-nav">Order</a></li>
+                </ul>
+            </nav>
         </header>
     <h1 class="page-header">Products</h1>
     <h3 class="page-subheader">Browse our full product catalog.</h3>
@@ -87,16 +94,17 @@
             </div>
         </div>
     </section>
-    <section id="footer">
-        <!-- <img src="images/bottom-img.png" alt="" class="footer-img"> -->
-        <a href="index.html"><h4 class="logo" id="footer-logo">Leens Wholesale</h4></a>
-        <nav class="footer-nav">
-            <ul>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="order.html">Order</a></li>
-            </ul>
-        </nav>
-    </section>
+    <footer id="footer">
+    <a href="index.html">
+        <h4 class="logo" id="footer-logo">Leens Wholesale</h4>
+    </a>
+    <nav class="footer-nav">
+        <ul>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="order.html">Order</a></li>
+        </ul>
+    </nav>
+    </footer>
 </body>
 </html>

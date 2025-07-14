@@ -357,3 +357,453 @@ input[type=submit]:hover {
     background-color: var(--beige);
     color: var(--blue);
 }
+
+/* Mobile Nav Styles */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 32px;
+  color: var(--blue);
+  margin-left: auto;
+  margin-right: 30px;
+  cursor: pointer;
+}
+
+#navMenu {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 50px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+/* Responsive Nav - Small Screens */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  #navMenu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--tteal);
+    width: 100%;
+    padding: 20px 0;
+    position: absolute;
+    top: 75px;
+    left: 0;
+    z-index: 1000;
+  }
+
+  #navMenu.open {
+    display: flex;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Beginning of media queries */
+
+
+/* === MEDIA QUERIES FOR RESPONSIVENESS === */
+
+/* Small devices (phones, 360px - 599px) */
+@media (max-width: 599px) {
+  nav {
+    float: none;
+    margin: 0;
+    text-align: center;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    gap: 10px;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  #title {
+    font-size: 40px;
+    top: 40%;
+  }
+
+  #slogan {
+    font-size: 24px;
+  }
+
+  .page-header {
+    font-size: 35px;
+  }
+
+  #featured {
+    margin-top: 25%;
+  }
+
+
+  #feat-products-sec {
+    flex-direction: column;
+    margin-left: 30%;
+  }
+
+  .feat-product {
+    margin-top: 15%;
+  }
+
+  .contact-text {
+    font-size: 16px;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  #contact-section {
+    margin-left: 20%;
+    margin-right: auto;
+  }
+
+  .feat-prod-img,
+  .prod-img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin: 50px auto;
+    width: 90%;
+  }
+
+
+  .form-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  label {
+    margin-bottom: 5px;
+  }
+
+  input[type=text],
+  input[type=tel],
+  input[type=email],
+  input[type=number],
+  textarea {
+    width: 90%;
+  }
+
+  #form {
+    margin-left: 0;
+    width: 100%;
+    padding: 0 5%;
+  }
+
+  iframe {
+    height: 250px !important;
+  }
+
+  #footer {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 20px 0;
+  }
+
+  #footer-logo,
+  .footer-nav {
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  #footer-logo {
+    left: 25%;
+  }
+
+  .back-to-top {
+    right: 10px;
+    bottom: 10px;
+  }
+}
+
+/* Tablets (600px - 1023px) */
+@media (min-width: 600px) and (max-width: 1023px) {
+  nav {
+    float: none;
+    margin: auto;
+    text-align: center;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+  }
+
+  nav ul li {
+    display: inline-block;
+  }
+
+  #products {
+    margin: 0;
+  }
+
+  .row {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 75%;
+  }
+
+    #feat-products-sec {
+        flex-wrap: wrap;
+        justify-content: center;
+  }
+
+  .product,
+  .feat-product {
+    margin: 15px;
+  }
+
+  .feat-prod-img,
+  .prod-img {
+    width: 175px;
+    height: 175px;
+  }
+
+  #title {
+    font-size: 60px;
+    top: 30%;
+  }
+
+  .page-header {
+    font-size: 50px;
+  }
+
+  #contact-section {
+    margin-left: 35%;
+  }
+
+  .contact-text {
+    font-size: 18px;
+  }
+
+  .footer-nav {
+    margin-left: 40%;
+    margin-top: 5%;
+  }
+
+  input[type=text],
+  input[type=tel],
+  input[type=email],
+  input[type=number],
+  textarea {
+    width: 300px;
+  }
+
+  #form {
+    margin-top: 5%;
+    margin-right: 5%;
+  }
+}
+
+/* Medium devices (small laptops, 1024px - 1279px) */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  nav {
+    margin-left: auto;
+    margin-right: 60px;
+  }
+
+  #title {
+    font-size: 80px;
+  }
+
+  .page-header {
+    font-size: 65px;
+  }
+
+  .feat-prod-img,
+  .prod-img {
+    width: 200px;
+    height: 200px;
+  }
+
+  #products {
+    margin-left: 0;
+  }
+
+  .row {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 75%;
+  }
+
+  .form-section {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  #form {
+    margin-left: 100px;
+  }
+}
+
+/* Large devices (desktop, 1280px - 1599px) */
+@media (min-width: 1280px) and (max-width: 1599px) {
+
+  #navMenu {
+    margin-left: 550px;
+  }
+
+    #form {
+    margin-left: 150px;
+  }
+
+  .page-header {
+    font-size: 70px;
+  }
+
+  .row {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 0;
+  }
+
+  #products {
+    margin-left: 0;
+  }
+
+
+}
+
+/* Ultra-wide screens (≥1600px) */
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  #title {
+    font-size: 100px;
+  }
+
+  .page-header {
+    font-size: 75px;
+  }
+
+  #form {
+    margin-left: 200px;
+  }
+}
+
+
+/* === Footer Base Styles === */
+#footer {
+  background-color: var(--tteal);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+  gap: 10px;
+}
+
+#footer-logo {
+  color: var(--blue);
+  font-size: 20px;
+  margin: 0;
+  text-align: center;
+}
+
+.footer-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  padding: 0;
+}
+
+.footer-nav ul li a {
+  text-decoration: none;
+  color: var(--blue);
+  font-size: 16px;
+}
+
+.footer-nav ul li a:hover {
+  color: var(--beige);
+}
+
+/* === Hide nav links on mobile === */
+@media (max-width: 599px) {
+  .footer-nav {
+    display: none;
+  }
+}
+
+/* === Show footer nav on tablets and up === */
+@media (min-width: 600px) {
+  #footer {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 60px;
+  }
+
+  #footer-logo {
+    font-size: 24px;
+    text-align: left;
+    margin-left: 5%;
+  }
+
+  .footer-nav {
+    display: block;
+    
+  }
+}

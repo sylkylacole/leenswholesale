@@ -10,21 +10,28 @@
 </head>
 <body>
     <section id="landing">
-        <header class="navbar" id="index-navbar">
-                <a href="index.html" id="logo-link"><h4 class="logo" id="landing-link">Leens Wholesale</h4></a>
-                <nav>
-                    <ul>
-                        <li><a href="#contact" class="landing-nav">Contact</a></li>
-                        <li><a href="products.html" class="landing-nav">Products</a></li>
-                        <li><a href="order.html" class="landing-nav">Order</a></li>
-                    </ul>
-                </nav>
+        <header class="navbar">
+            <a href="index.html" id="logo-link"><h4 class="logo" id="landing-link">Leens Wholesale</h4></a>
+            
+            <!-- Hamburger icon -->
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                &#9776;
+            </button>
+
+            <nav id="navMenu">
+                <ul class="nav-links">
+                <li><a href="index.html#contact" class="landing-nav">Contact</a></li>
+                <li><a href="products.html" class="landing-nav">Products</a></li>
+                <li><a href="order.html" class="landing-nav">Order</a></li>
+                </ul>
+            </nav>
         </header>
+
         <div id="home">
             <h1 id="title">Leens Wholesale</h1><br>
             <!-- <h3 id="slogan">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3> -->
             <!-- <div id="overlay"></div> -->
-        </d>
+        </div>
     </section>
     <button onClick="topFunction();" class="back-to-top" title="Go to top" id="topButton">&#8593;</button>
     <section id="contact-featured">     
@@ -59,16 +66,17 @@
             </div>
         </div>
     </section>
-    <section id="footer">
-        <!-- <img src="images/bottom-img.png" alt="" class="footer-img"> -->
-        <a href="index.html"><h4 class="logo" id="footer-logo">Leens Wholesale</h4></a>
-        <nav class="footer-nav">
-            <ul>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="order.html">Order</a></li>
-            </ul>
-        </nav>
-    </section>
+    <footer id="footer">
+    <a href="index.html">
+        <h4 class="logo" id="footer-logo">Leens Wholesale</h4>
+    </a>
+    <nav class="footer-nav">
+        <ul>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="order.html">Order</a></li>
+        </ul>
+    </nav>
+    </footer>
 </body>
 </html>
