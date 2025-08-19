@@ -12,6 +12,11 @@
     src: url(fonts/outfit/Outfit-Regular.ttf);
 }
 
+@font-face {
+  font-family: "Barcode";
+  src: url(fonts/barcode/fre3of9x.ttf)
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -197,6 +202,11 @@ nav ul li a:hover {
     text-align: center;
     font-size: 20px;
     display: block; /* Change this using CSS */
+}
+
+.feat-barcode, .barcode {
+  font-family: "Barcode", cursive;
+  text-align: center;
 }
 
 .bottom-text {
