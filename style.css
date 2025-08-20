@@ -207,6 +207,7 @@ nav ul li a:hover {
 .feat-barcode, .barcode {
   font-family: "Barcode", cursive;
   text-align: center;
+  display: none;
 }
 
 .bottom-text {
