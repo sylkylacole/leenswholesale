@@ -6,7 +6,6 @@
     <title>Leens Wholesale - Order</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <script src="script.js"></script><script src="script.js"></script>
 </head>
 <body>
         <header class="navbar">
@@ -28,8 +27,14 @@
     <h1 class="page-header">Place Order</h1>
     <h3 class="page-subheader">Use the form below to inquire of the products we have available</h3>
     <section id="order">
-        <div id="form">
-            <form action="https://api.web3forms.com/submit" method="POST">
+        <!-- ACCOUNT STATUS -->
+         <div id="account">
+             <p id ="welcome"></p>
+             <button type="button" id="logoutBtn">Log out</button>
+         </div>
+
+        <div>
+            <form id="form" action="https://api.web3forms.com/submit" method="POST">
                 <div class="form-section">
                     <label for="name">Name</label>
                     <input type="text" name="name" id="name" value="Name" required>
@@ -37,12 +42,12 @@
 
                 <div class="form-section">
                     <label for="phone">Phone</label>
-                    <input type="tel" id="phone" value="Phone number">
+                    <input type="tel" id="phone" name="phone" value="Phone number" required>
                 </div>
 
                 <div class="form-section">
                     <label for="email">Email</label>
-                    <input type="email" id="email" value="Email" required>
+                    <input type="email" id="email" name="email" value="Email" required>
                 </div>
 
                 <div class="form-section">
@@ -83,7 +88,8 @@
 
                 <div class="form-section">
                     <label for="products">List all products you want to buy</label>
-                    <textarea name="product" id="product">Product 1, Product 2, Product 3, Product 4</textarea>
+                    <textarea name="product" id="product" placeholder="Your selected products will appear here"></textarea>
+
                 </div>
 
                 <div class="form-section">
@@ -107,5 +113,6 @@
         </ul>
     </nav>
     </footer>
+<script src="script.js"></script>
 </body>
 </html>
