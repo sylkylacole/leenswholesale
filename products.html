@@ -6,7 +6,6 @@
     <title>Leens Wholesale - Products</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <script src="script.js"></script>
 </head>
 <body>
         <header class="navbar">
@@ -28,133 +27,1885 @@
     <h1 class="page-header">Products</h1>
     <h3 class="page-subheader">Browse our full product catalog.</h3>
     <section id="products">
+        <aside class="sidebar">
+            <h3>Brands</h3>
+            <ul>
+                <li onclick="filterBrand('all')">All</li>
+
+                <li>
+                    Woods
+                    <ul class="sub">
+                        <li onclick="filterType('woods','cigarillos')">Cigarillos</li>
+                        <li onclick="filterType('woods','wraps')">Wraps</li>
+                        
+                    </ul>
+                </li>
+
+
+                <li>
+                    Backwoods
+                    <ul class="sub">
+                        <li onclick="filterType('backwoods','5pks')">5Packs</li>
+                        <li onclick="filterType('backwoods','3pks')">3Packs</li>
+                        <li onclick="filterType('backwoods','singles')">Singles</li>
+                    </ul>
+                </li>
+
+                <li>
+                     4K's
+                    <ul class="sub">
+                        <li onclick="filterType('4K\'s','cigarillos')">Cigarillos</li>
+                        <li onclick="filterType('4K\'s','wraps')">Wraps</li>
+                    </ul>
+
+                </li>
+
+                <li>
+                    Mini
+                    <ul class="sub">
+                        <li onclick="filterType('mini','cigarillos')">Cigarillos</li>
+                    </ul>
+                </li>
+                <li>
+                     City Life
+                    <ul class="sub">
+                        <li onclick="filterType('city-life','cigarillos')">Cigarillos</li>
+                    </ul>
+                </li>
+                
+                <li onclick="filterBrand('dutch-masters')">Dutch Masters</li>
+                <li onclick="filterBrand('accessories')">Accessories</li>
+            </ul>
+
+        </aside>
+       <d></d>
+        <div class="products-grid">
         <div class="row" id="row-1">
-            <div class="product" id="product-1">
-                <img src="https://th.bing.com/th/id/OIP.1fBnwrW4a_EUY0XTn3QWygHaHa?w=178&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="woods leaf natural" id="1-img" class="prod-img">
-                <p id="1-prod-name" class="prod-name">Woods Leaf Natural</p>
-                <p class="barcode">*ABC123*</p>
-            </div>
+                <div class="product"
+                    data-brand="woods"
+                    data-type="cigarillos"
+                    id="product-1">
+                    <img src="images/OIP.webp" alt="woods leaf natural" class="prod-img">
+                    <p class="prod-name">Woods Leaf Natural</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
 
-            <div class="product" id="product-2">
-                <img src="images/products/product2.jpg" alt="" id="2-img" class="prod-img">
-                <p id="2-prod-name" class="prod-name">Blunt Black Spray</p>
-                <p class="barcode">*ABC123*</p>
-            </div>
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Woods Leaf Natural')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="woods"
+                    data-type="cigarillos"
+                    id="product-2">
+                    <img src="images/products/Sweet-Woods-Classic-Leaf-Cigarillos_tn.jpg" alt="woods leaf classic" class="prod-img">
+                    <p class="prod-name">Woods Leaf Classic</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
 
-            <div class="product" id="product-3">
-                <img src="images/products/product3.jpg" alt="" id="3-img" class="prod-img">
-                <p id="3-prod-name" class="prod-name">Loose Leaf Ice Cold</p>
-                <p class="barcode">*ABC123*</p>
-            </div>
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Woods Leaf Classic')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="woods"
+                    data-type="cigarillos"
+                    id="product-3">
+                    <img src="images/products/oipe.webp" alt="woods leaf russian cream" class="prod-img">
+                    <p class="prod-name">Woods Leaf Russian Cream</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
 
-            <div class="product" id="product-4">
-                <img src="images/products/product4.jpg" alt="" id="4-img" class="prod-img">
-                <p id="4-prod-name" class="prod-name">Torch Lighters</p>
-                <p class="barcode">*ABC123*</p>
-            </div>
-        </div>
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Woods Leaf Russian Cream')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="woods"
+                    data-type="cigarillos"
+                    id="product-5">
+                    <img src="images/products/oip1.webp" alt="woods leaf golden honey" class="prod-img">
+                    <p class="prod-name">Woods Leaf Golden Honey</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
 
-        <div class="row" id="row-2">
-            <div class="product" id="product-5">
-                <img src="images/products/product5.jpg" alt="" id="5-img" class="prod-img">
-                <p id="5-prod-name" class="prod-name">White T-shirt</p>
-                <p class="barcode">*ABC123*</p>
-            </div>
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Woods Leaf Golden Honey')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="woods"
+                    data-type="cigarillos"
+                    id="product-4">
+                    <img src="images/products/oip2.jpg" alt="woods leaf honey berry" class="prod-img">
+                    <p class="prod-name">Woods Leaf Honey Berry</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
 
-            <div class="product" id="product-6">
-                <img src="images/products/product6.jpg" alt="" id="6-img" class="prod-img">
-                <p id="6-prod-name" class="prod-name">Black T-shirt</p>
-                <p class="barcode">*ABC123*</p>
-            </div>
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Woods Leaf Honey Berry')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="woods"
+                    data-type="cigarillos"
+                    id="product-6">
+                    <img src="images/products/oip3.webp" alt="woods leaf natural" class="prod-img">
+                    <p class="prod-name">Woods Leaf Banana </p>
 
-            <div class="product" id="product-7">
-                <img src="images/products/product7.jpg" alt="" id="7-img" class="prod-img">
-                <p id="7-prod-name" class="prod-name">Game Diamond</p>
-                <p class="barcode">*ABC123*</p>
-            </div>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Woods Leaf Banana')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="woods"
+                    data-type="cigarillos"
+                    id="product-7">
+                    <img src="images/products/oip4.webp" alt="woods leaf sweet aromatic" class="prod-img">
+                    <p class="prod-name">Woods Leaf Sweet Aromatic </p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
 
-            <div class="product" id="product-8">
-                <img src="images/products/product8.jpg" alt="backwoods chocolate" id="8-img" class="prod-img">
-                <p id="8-prod-name" class="prod-name">Backwoods Chocolate</p>
-                <p class="barcode">*ABC123*</p>
-            </div>
-        </div>
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Woods Leaf Sweet Aromatic')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="woods"
+                    data-type="cigarillos"
+                    id="product-8">
+                    <img src="images/products/oip5.webp" alt="woods leaf creamy peach" class="prod-img">
+                    <p class="prod-name">Woods Leaf Creamy Peach</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
 
-        <div class="row" id="row-3">
-            <div class="product" id="product-9">
-                <img src="images/products/product9.jpg" alt="good times mini green sweet" id="9-img" class="prod-img">
-                <p id="9-prod-name" class="prod-name">Good Times Mini Green Sweet</p>
-                <p class="barcode">*ABC123*</p>
-            </div>
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Woods Leaf Creamy Peach')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="woods"
+                    data-type="cigarillos"
+                    id="product-9">
+                    <img src="images/products/oip6.webp" alt="woods leaf diamond" class="prod-img">
+                    <p class="prod-name">Woods Leaf Diamond</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
 
-            <div class="product" id="product-10">
-                <img src="images/products/product10.jpg" alt="blk smooth" id="10-img" class="prod-img">
-                <p id="10-prod-name" class="prod-name">BLK Smooth</p>
-                <p class="barcode">*ABC123*</p>
-            </div>
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Woods Leaf Diamond')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="woods"
+                    data-type="cigarillos"
+                    id="product-10">
+                    <img src="images/products/oip7.webp" alt="woods leaf silver" class="prod-img">
+                    <p class="prod-name">Woods Leaf Silver</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
 
-            <div class="product" id="product-11">
-                <img src="images/products/product11.jpg" alt="backwoods sweet aromatic" id="11-img" class="prod-img">
-                <p id="11-prod-name" class="prod-name">Backwoods Sweet Aromatic</p>
-                <p class="barcode">*ABC123*</p>
-            </div>
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Woods Leaf Silver')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="woods"
+                    data-type="cigarillos"
+                    id="product-11">
+                    <img src="images/products/oip12.webp" alt="woods leaf vanilla" class="prod-img">
+                    <p class="prod-name">Woods Leaf Vanilla</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
 
-            <div class="product" id="product-12">
-                <img src="images/products/product12.jpg" alt="" id="12-img" class="prod-img">
-                <p id="12-prod-name" class="prod-name">Swisher Sweets</p>
-                <p class="barcode">*ABC123*</p>
-            </div>
-        </div>
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Woods Leaf Vanilla')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="woods"
+                    data-type="cigarillos"
+                    id="product-12">
+                    <img src="images/products/oip9.webp" alt="woods leaf chocolate cream" class="prod-img">
+                    <p class="prod-name">Woods Leaf Chocolate Cream</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
 
-        <div class="row" id="row-4">
-            <div class="product" id="product-13">
-                <img src="images/products/product13.jpg" alt="good times hd honey" id="13-img" class="prod-img">
-                <p id="13-prod-name" class="prod-name">Good Times HD Honey</p>
-                <p class="barcode">*ABC123*</p>
-            </div>
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Woods Leaf Chocolate Cream')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="woods"
+                    data-type="cigarillos"
+                    id="product-13">
+                    <img src="images/products/oip10.webp" alt="woods leaf strawberry cream" class="prod-img">
+                    <p class="prod-name">Woods Leaf Strawberry Cream</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
 
-            <div class="product" id="product-14">
-                <img src="images/products/product14.jpg" alt="black & mild wood tip" id="14-img" class="prod-img">
-                <p id="14-prod-name" class="prod-name">Black & Mild Wood Tip</p>
-                <p class="barcode">*ABC123*</p>
-            </div>
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Woods Leaf Strawberry Cream')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="woods"
+                    data-type="cigarillos"
+                    id="product-14">
+                    <img src="images/products/oip11.webp" alt="woods leaf cognac" class="prod-img">
+                    <p class="prod-name">Woods Leaf Cognac</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
 
-            <div class="product" id="product-15">
-                <img src="images/products/product15.jpg" alt="4k's sweet delicious" id="15-img" class="prod-img">
-                <p id="15-prod-name" class="prod-name">4k's Sweet Delicious</p>
-                <p class="barcode">*ABC123*</p>
-            </div>
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Woods Leaf Cognac')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="woods"
+                    data-type="cigarillos"
+                    id="product-15">
+                    <img src="images/products/oip8.webp" alt="woods leaf platinum" class="prod-img">
+                    <p class="prod-name">Woods Leaf Platinum</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
 
-            <!-- <div class="product" id="product-16">
-                <img src="images/products/product16.jpg" alt="" id="16-img" class="prod-img">
-                <p id="16-prod-name" class="prod-name">Product 16</p>
-            </div> -->
-        </div>
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Woods Leaf Platinum')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="woods"
+                    data-type="wraps"
+                    id="product-16">
+                    <img src="images/products/oip20.webp" alt="woods leaf wraps natural" class="prod-img">
+                    <p class="prod-name">Woods Leaf Wraps Natural</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
 
-        <!-- <div class="row" id="row-5">
-            <div class="product" id="product-17">
-                <img src="images/products/product17.jpg" alt="good times hd honey" id="17-img" class="prod-img">
-                <p id="17-prod-name" class="prod-name">Good Times HD Honey</p>
-                <p class="barcode">*ABC123*</p>
-            </div>
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Woods Leaf Wraps Natural')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="woods"
+                    data-type="wraps"
+                    id="product-17">
+                    <img src="images/products/oip17.webp" alt="woods leaf wraps platinum" class="prod-img">
+                    <p class="prod-name">Woods Leaf Wraps Platinum</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
 
-            <div class="product" id="product-18">
-                <img src="images/products/product18.jpg" alt="black & mild wood tip" id="18-img" class="prod-img">
-                <p id="18-prod-name" class="prod-name">Black & Mild Wood Tip</p>
-                <p class="barcode">*ABC123*</p>
-            </div>
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Woods Leaf Wraps Platinum')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="woods"
+                    data-type="wraps"
+                    id="product-18">
+                    <img src="images/products/oip13.webp" alt="woods leaf wraps vanilla" class="prod-img">
+                    <p class="prod-name">Woods Leaf Wraps Vanilla</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
 
-            <div class="product" id="product-19">
-                <img src="images/products/product19.jpg" alt="4k's sweet delicious" id="19-img" class="prod-img">
-                <p id="19-prod-name" class="prod-name">4k's Sweet Delicious</p>
-                <p class="barcode">*ABC123*</p>
-            </div>
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Woods Leaf Wraps Vanilla')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="woods"
+                    data-type="wraps"
+                    id="product-19">
+                    <img src="images/products/oip18.webp" alt="woods leaf wraps honey berry" class="prod-img">
+                    <p class="prod-name">Woods Leaf Wraps Honey Berry</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
 
-            <div class="product" id="product-20">
-                <img src="images/products/product20.jpg" alt="" id="20-img" class="prod-img">
-                <p id="20-prod-name" class="prod-name">Product 20</p>
-            </div>
-        </div> -->
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Woods Leaf Wraps Honey Berry')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="woods"
+                    data-type="wraps"
+                    id="product-20">
+                    <img src="images/products/oip15.webp" alt="woods leaf wraps russian cream" class="prod-img">
+                    <p class="prod-name">Woods Leaf Wraps Russian Cream</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Woods Leaf Wraps Russian Cream')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="woods"
+                    data-type="wraps"
+                    id="product-21">
+                    <img src="images/products/oip16.webp" alt="woods leaf wraps banana" class="prod-img">
+                    <p class="prod-name">Woods Leaf Wraps Banana</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Woods Leaf Wraps Banana')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="woods"
+                    data-type="wraps"
+                    id="product-22">
+                    <img src="images/products/oip14.webp" alt="woods leaf wraps irish cream" class="prod-img">
+                    <p class="prod-name">Woods Leaf Wraps Irish Cream</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Woods Leaf Wraps Irish Cream')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="woods"
+                    data-type="wraps"
+                    id="product-23">
+                    <img src="images/products/oip19.webp" alt="woods leaf wraps sweet aromatic" class="prod-img">
+                    <p class="prod-name">Woods Leaf Wraps Sweet Aromatic</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Woods Leaf Wraps Sweet Aromatic')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="backwoods"
+                    data-type="5pks"
+                    id="product-24">
+                    <img src="images/products/oip21.webp" alt="backwoods cigarillos sweet aromatic" class="prod-img">
+                    <p class="prod-name">Backwoods Cigarillos Sweet Aromatic</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Backwoods Cigarillos Sweet Aromatic')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="backwoods"
+                    data-type="5pks"
+                    id="product-25">
+                    <img src="images/products/oip22.webp" alt="backwoods cigarillos banana" class="prod-img">
+                    <p class="prod-name">Backwoods Cigarillos Banana</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Backwoods Cigarillos Banana')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="backwoods"
+                    data-type="5pks"
+                    id="product-26">
+                    <img src="images/products/oip23.webp" alt="backwoods cigarillos black russian" class="prod-img">
+                    <p class="prod-name">Backwoods Cigarillos Black Russian</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Backwoods Cigarillos Black Russian')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="backwoods"
+                    data-type="5pks"
+                    id="product-27">
+                    <img src="images/products/oip24.webp" alt="backwoods cigarillos honey" class="prod-img">
+                    <p class="prod-name">Backwoods Cigarillos Honey</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Backwoods Cigarillos Honey')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="backwoods"
+                    data-type="5pks"
+                    id="product-28">
+                    <img src="images/products/oip25.webp" alt="backwoods cigarillos cognac" class="prod-img">
+                    <p class="prod-name">Backwoods Cigarillos Cognac</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Backwoods Cigarillos Cognac')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="backwoods"
+                    data-type="5pks"
+                    id="product-29">
+                    <img src="images/products/oip26.webp" alt="backwoods cigarillos smoked caramel" class="prod-img">
+                    <p class="prod-name">Backwoods Cigarillos Smoked Caramel</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Backwoods Cigarillos Smoked Caramel')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="backwoods"
+                    data-type="5pks"
+                    id="product-30">
+                    <img src="images/products/oip27.webp" alt="backwoods cigarillos russian cream" class="prod-img">
+                    <p class="prod-name">Backwoods Cigarillos Russian Cream</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Backwoods Cigarillos Russian Cream')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="backwoods"
+                    data-type="5pks"
+                    id="product-31">
+                    <img src="images/products/oip28.webp" alt="backwoods cigarillos tical" class="prod-img">
+                    <p class="prod-name">Backwoods Cigarillos Tical</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Backwoods Cigarillos Tical')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="backwoods"
+                    data-type="5pks"
+                    id="product-32">
+                    <img src="images/products/oip29.webp" alt="backwoods cigarillos wild rum" class="prod-img">
+                    <p class="prod-name">Backwoods Cigarillos Wild Rum</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Backwoods Cigarillos Wild Rum')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="backwoods"
+                    data-type="5pks"
+                    id="product-33">
+                    <img src="images/products/oip30.webp" alt="backwoods cigarillos honey berry" class="prod-img">
+                    <p class="prod-name">Backwoods Cigarillos Honey Berry</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Backwoods Cigarillos Honey Berry')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="backwoods"
+                    data-type="5pks"
+                    id="product-34">
+                    <img src="images/products/oip31.webp" alt="backwoods cigarillos dark berry" class="prod-img">
+                    <p class="prod-name">Backwoods Cigarillos Dark Berry</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Backwoods Cigarillos Dark Berry')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="backwoods"
+                    data-type="5pks"
+                    id="product-35">
+                    <img src="images/products/oip32.webp" alt="backwoods cigarillos dark stout" class="prod-img">
+                    <p class="prod-name">Backwoods Cigarillos Dark Stout</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Backwoods Cigarillos Dark Stout')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="backwoods"
+                    data-type="5pks"
+                    id="product-36">
+                    <img src="images/products/oip33.webp" alt="backwoods cigarillos chocolate" class="prod-img">
+                    <p class="prod-name">Backwoods Cigarillos Chocolate</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Backwoods Cigarillos Chocolate')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="backwoods"
+                    data-type="5pks"
+                    id="product-37">
+                    <img src="images/products/oip34.webp" alt="backwoods cigarillos bananas foster" class="prod-img">
+                    <p class="prod-name">Backwoods Cigarillos Bananas Foster</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Backwoods Cigarillos Bananas Foster')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="backwoods"
+                    data-type="5pks"
+                    id="product-38">
+                    <img src="images/products/oip35.webp" alt="backwoods cigarillos honey bourbon" class="prod-img">
+                    <p class="prod-name">Backwoods Cigarillos Honey Bourbon</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Backwoods Cigarillos Honey Bourbon')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="backwoods"
+                    data-type="5pks"
+                    id="product-39">
+                    <img src="images/products/oip36.webp" alt="backwoods cigarillos original" class="prod-img">
+                    <p class="prod-name">Backwoods Cigarillos Original</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Backwoods Cigarillos Original')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="backwoods"
+                    data-type="5pks"
+                    id="product-40">
+                    <img src="images/products/oip37.webp" alt="backwoods cigarillos vanilla" class="prod-img">
+                    <p class="prod-name">Backwoods Cigarillos Vanilla</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Backwoods Cigarillos Vanilla')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="backwoods"
+                    data-type="5pks"
+                    id="product-41">
+                    <img src="images/products/oip38.webp" alt="backwoods cigarillos ATL sourther sweet tea" class="prod-img">
+                    <p class="prod-name">Backwoods Cigarillos ATL Sourther Sweet Tea</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Backwoods Cigarillos ATL Sourther Sweet Tea')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="backwoods"
+                    data-type="5pks"
+                    id="product-42">
+                    <img src="images/products/oip39.webp" alt="backwoods cigarillos sweet summertime CHI" class="prod-img">
+                    <p class="prod-name">Backwoods Cigarillos Sweet Summertime CHI</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Backwoods Cigarillos Sweet Summertime CHI')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="backwoods"
+                    data-type="5pks"
+                    id="product-43">
+                    <img src="images/products/oip40.webp" alt="backwoods cigarillos HOU the purple pack" class="prod-img">
+                    <p class="prod-name">Backwoods Cigarillos HOU The Purple Pack</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Backwoods Cigarillos HOU The Purple Pack')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="backwoods"
+                    data-type="3pks"
+                    id="product-44">
+                    <img src="images/products/oip41.webp" alt="backwoods cigarillos honey" class="prod-img">
+                    <p class="prod-name">Backwoods Cigarillos Honey</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Backwoods Cigarillos Honey')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="backwoods"
+                    data-type="3pks"
+                    id="product-45">
+                    <img src="images/products/oip42.webp" alt="backwoods cigarillos sweet aromatic" class="prod-img">
+                    <p class="prod-name">Backwoods Cigarillos Sweet Aromatic</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Backwoods Cigarillos Sweet Aromatic')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="backwoods"
+                    data-type="3pks"
+                    id="product-46">
+                    <img src="images/products/oip53.webp" alt="backwoods cigarillos honey berry" class="prod-img">
+                    <p class="prod-name">Backwoods Cigarillos Honey Berry</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Backwoods Cigarillos Honey Berry')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="backwoods"
+                    data-type="3pks"
+                    id="product-47">
+                    <img src="images/products/oip43.webp" alt="backwoods cigarillos russian cream" class="prod-img">
+                    <p class="prod-name">Backwoods Cigarillos Russian Cream</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Backwoods Cigarillos Russian Cream')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="backwoods"
+                    data-type="3pks"
+                    id="product-48">
+                    <img src="images/products/oip44.webp" alt="backwoods cigarillos original" class="prod-img">
+                    <p class="prod-name">Backwoods Cigarillos Original</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Backwoods Cigarillos Original')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="backwoods"
+                    data-type="singles"
+                    id="product-49">
+                    <img src="images/products/oip45.webp" alt="backwoods cigarillos honey berry" class="prod-img">
+                    <p class="prod-name">Backwoods Cigarillos Honey Berry</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Backwoods Cigarillos Honey Berry')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="backwoods"
+                    data-type="singles"
+                    id="product-50">
+                    <img src="images/products/oip46.webp" alt="backwoods cigarillos honey" class="prod-img">
+                    <p class="prod-name">Backwoods Cigarillos Honey</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Backwoods Cigarillos Honey')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="backwoods"
+                    data-type="singles"
+                    id="product-51">
+                    <img src="images/products/oip47.webp" alt="backwoods cigarillos black russian" class="prod-img">
+                    <p class="prod-name">Backwoods Cigarillos Black Russian</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Backwoods Cigarillos Black Russian')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="backwoods"
+                    data-type="singles"
+                    id="product-52">
+                    <img src="images/products/oip48.webp" alt="backwoods cigarillos dark stout" class="prod-img">
+                    <p class="prod-name">Backwoods Cigarillos Dark Stout</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Backwoods Cigarillos Dark Stout')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="backwoods"
+                    data-type="singles"
+                    id="product-53">
+                    <img src="images/products/oip49.webp" alt="backwoods cigarillos russian cream" class="prod-img">
+                    <p class="prod-name">Backwoods Cigarillos Russian Cream</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Backwoods Cigarillos Russian Cream')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="backwoods"
+                    data-type="singles"
+                    id="product-54">
+                    <img src="images/products/oip50.webp" alt="backwoods cigarillos honey bourbon" class="prod-img">
+                    <p class="prod-name">Backwoods Cigarillos Honey Bourbon</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Backwoods Cigarillos Honey Bourbon')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="backwoods"
+                    data-type="singles"
+                    id="product-55">
+                    <img src="images/products/oip51.webp" alt="backwoods cigarillos sweet aromatic" class="prod-img">
+                    <p class="prod-name">Backwoods Cigarillos Sweet Aromatic</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Backwoods Cigarillos Sweet Aromatic')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="backwoods"
+                    data-type="singles"
+                    id="product-56">
+                    <img src="images/products/oip52.webp" alt="backwoods cigarillos original" class="prod-img">
+                    <p class="prod-name">Backwoods Cigarillos Original</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Backwoods Cigarillos Original')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="4K's"
+                    data-type="cigarillos"
+                    id="product-57">
+                    <img src="images/products/oip54.webp" alt="4K's cigarillos cherry" class="prod-img">
+                    <p class="prod-name">4K's Cigarillos Cherry</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, '4K\'s Cigarillos Cherry')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="4K's"
+                    data-type="cigarillos"
+                    id="product-58">
+                    <img src="images/products/oip55.jpg" alt="4K's cigarillos blueberry pineapple" class="prod-img">
+                    <p class="prod-name">4K's Cigarillos Blueberry Pineapple</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, '4K\'s Cigarillos Blueberry Pineapple')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="4K's"
+                    data-type="cigarillos"
+                    id="product-59">
+                    <img src="images/products/oip56.webp" alt="4K's cigarillos black diamond" class="prod-img">
+                    <p class="prod-name">4K's Cigarillos Black Diamond</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, '4K\'s Cigarillos Black Diamond')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="4K's"
+                    data-type="cigarillos"
+                    id="product-60">
+                    <img src="images/products/oip57.jpg" alt="4K's cigarillos mango" class="prod-img">
+                    <p class="prod-name">4K's Cigarillos Mango</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, '4K\'s Cigarillos Mango')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="4K's"
+                    data-type="cigarillos"
+                    id="product-61">
+                    <img src="images/products/oip58.webp" alt="4K's cigarillos watermelon" class="prod-img">
+                    <p class="prod-name">4K's Cigarillos Watermelon</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, '4K\'s Cigarillos Watermelon')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="4K's"
+                    data-type="cigarillos"
+                    id="product-62">
+                    <img src="images/products/oip59.webp" alt="4K's cigarillos green sweet" class="prod-img">
+                    <p class="prod-name">4K's Cigarillos Green Sweet</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, '4K\'s Cigarillos Green Sweet')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="4K's"
+                    data-type="cigarillos"
+                    id="product-63">
+                    <img src="images/products/oip60.webp" alt="4K's cigarillos diamond" class="prod-img">
+                    <p class="prod-name">4K's Cigarillos Diamond</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, '4K\'s Cigarillos Diamond')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="4K's"
+                    data-type="cigarillos"
+                    id="product-64">
+                    <img src="images/products/oip61.webp" alt="4K's cigarillos sweet delicious" class="prod-img">
+                    <p class="prod-name">4K's Cigarillos Sweet Delicious</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, '4K\'s Cigarillos Sweet Delicious')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="4K's"
+                    data-type="cigarillos"
+                    id="product-65">
+                    <img src="images/products/oip62.webp" alt="4K's cigarillos black sweet" class="prod-img">
+                    <p class="prod-name">4K's Cigarillos Black Sweet</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, '4K\'s Cigarillos Black Sweet')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="4K's"
+                    data-type="cigarillos"
+                    id="product-67">
+                    <img src="images/products/oip63.webp" alt="4K's cigarillos french vanilla" class="prod-img">
+                    <p class="prod-name">4K's Cigarillos French Vanilla</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, '4K\'s Cigarillos French Vanilla')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="4K's"
+                    data-type="cigarillos"
+                    id="product-68">
+                    <img src="images/products/oip64.webp" alt="4K's cigarillos pink lemonade" class="prod-img">
+                    <p class="prod-name">4K's Cigarillos Pink Lemonade</p>
+                    <p class="stock">Out Of Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, '4K\'s Cigarillos Pink Lemonade')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="4K's"
+                    data-type="wraps"
+                    id="product-69">
+                    <img src="images/products/oip65.webp" alt="4K's wraps green sweet" class="prod-img">
+                    <p class="prod-name">4K's Wraps Green Sweet</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, '4K\'s Wraps Green Sweet')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="4K's"
+                    data-type="wraps"
+                    id="product-70">
+                    <img src="images/products/oip66.webp" alt="4K's wraps blueberry" class="prod-img">
+                    <p class="prod-name">4K's Wraps Blueberry</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, '4K\'s Wraps Blueberry')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="4K's"
+                    data-type="wraps"
+                    id="product-71">
+                    <img src="images/products/oip67.webp" alt="4K's wraps fruit punch" class="prod-img">
+                    <p class="prod-name">4K's Wraps Fruit Punch</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, '4K\'s Wraps Fruit Punch')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="4K's"
+                    data-type="wraps"
+                    id="product-72">
+                    <img src="images/products/oip68.webp" alt="4K's wraps napa grape" class="prod-img">
+                    <p class="prod-name">4K's Wraps Napa Grape</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, '4K\'s Wraps Napa Grape')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="4K's"
+                    data-type="wraps"
+                    id="product-73">
+                    <img src="images/products/oip69.webp" alt="4K's wraps watermelon" class="prod-img">
+                    <p class="prod-name">4K's Wraps Watermelon</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, '4K\'s Wraps Watermelon')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="4K's"
+                    data-type="wraps"
+                    id="product-74">
+                    <img src="images/products/oip70.webp" alt="4K's wraps black sweet" class="prod-img">
+                    <p class="prod-name">4K's Wraps Black Sweet</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, '4K\'s Wraps Black Sweet')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="4K's"
+                    data-type="wraps"
+                    id="product-75">
+                    <img src="images/products/oip71.webp" alt="4K's wraps sweet delicious" class="prod-img">
+                    <p class="prod-name">4K's Wraps Sweet Delicious</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, '4K\'s Wraps Sweet Delicious')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="4K's"
+                    data-type="wraps"
+                    id="product-76">
+                    <img src="images/products/oip72.webp" alt="4K's wraps diamond" class="prod-img">
+                    <p class="prod-name">4K's Wraps Diamond</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, '4K\'s Wraps Diamond')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="mini"
+                    data-type="cigarillos"
+                    id="product-77">
+                    <img src="images/products/oip73.png" alt="mini cigarillos diamond" class="prod-img">
+                    <p class="prod-name">Mini Cigarillos Diamond</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Mini Cigarillos Diamond')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="mini"
+                    data-type="cigarillos"
+                    id="product-78">
+                    <img src="images/products/oip74.webp" alt="mini cigarillos green sweet" class="prod-img">
+                    <p class="prod-name">Mini Cigarillos Green Sweet</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Mini Cigarillos Green Sweet')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="mini"
+                    data-type="cigarillos"
+                    id="product-79">
+                    <img src="images/products/oip75.webp" alt="mini cigarillos sweet" class="prod-img">
+                    <p class="prod-name">Mini Cigarillos Sweet</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Mini Cigarillos Sweet')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="mini"
+                    data-type="cigarillos"
+                    id="product-80">
+                    <img src="images/products/oip76.jpg" alt="mini cigarillos blueberry" class="prod-img">
+                    <p class="prod-name">Mini Cigarillos Blueberry</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Mini Cigarillos Blueberry')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="mini"
+                    data-type="cigarillos"
+                    id="product-81">
+                    <img src="images/products/oip77.webp" alt="mini cigarillos black diamond" class="prod-img">
+                    <p class="prod-name">Mini Cigarillos Black Diamond</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Mini Cigarillos Black Diamond')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="mini"
+                    data-type="cigarillos"
+                    id="product-82">
+                    <img src="images/products/oip78.webp" alt="mini cigarillos black sweet" class="prod-img">
+                    <p class="prod-name">Mini Cigarillos Black Sweet</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Mini Cigarillos Black Sweet')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="mini"
+                    data-type="cigarillos"
+                    id="product-83">
+                    <img src="images/products/oip79.webp" alt="mini cigarillos white grape" class="prod-img">
+                    <p class="prod-name">Mini Cigarillos White Grape</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Mini Cigarillos White Grape')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="mini"
+                    data-type="cigarillos"
+                    id="product-84">
+                    <img src="images/products/oip80.webp" alt="mini cigarillos watermelon" class="prod-img">
+                    <p class="prod-name">Mini Cigarillos Watermelon</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Mini Cigarillos Watermelon')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="mini"
+                    data-type="cigarillos"
+                    id="product-85">
+                    <img src="images/products/oip81.webp" alt="mini cigarillos classic green" class="prod-img">
+                    <p class="prod-name">Mini Cigarillos Classic Green</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Mini Cigarillos Classic Green')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="city-life"
+                    data-type="cigarillos"
+                    id="product-86">
+                    <img src="images/products/oip82.webp" alt="city life cigarillos diamond" class="prod-img">
+                    <p class="prod-name">City Life Cigarillos Diamond</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'City Life Cigarillos Diamond')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="city-life"
+                    data-type="cigarillos"
+                    id="product-87">
+                    <img src="images/products/oip83.webp" alt="city life cigarillos white grape" class="prod-img">
+                    <p class="prod-name">City Life Cigarillos White Grape</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'City Life Cigarillos White Grape')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="city-life"
+                    data-type="cigarillos"
+                    id="product-88">
+                    <img src="images/products/oip84.webp" alt="city life cigarillos black sweet" class="prod-img">
+                    <p class="prod-name">City Life Cigarillos Black Sweet</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'City Life Cigarillos Black Sweet')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="city-life"
+                    data-type="cigarillos"
+                    id="product-89">
+                    <img src="images/products/oip85.webp" alt="city life cigarillos sweet" class="prod-img">
+                    <p class="prod-name">City Life Cigarillos Sweet</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'City Life Cigarillos Sweet')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="city-life"
+                    data-type="cigarillos"
+                    id="product-90">
+                    <img src="images/products/oip93.webp" alt="city life cigarillos black diamond" class="prod-img">
+                    <p class="prod-name">City Life Cigarillos Black Diamond</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'City Life Cigarillos Black Diamond')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="city-life"
+                    data-type="cigarillos"
+                    id="product-91">
+                    <img src="images/products/oip87.webp" alt="city life cigarillos sour apple" class="prod-img">
+                    <p class="prod-name">City Life Cigarillos Sour Apple</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'City Life Cigarillos Sour Apple')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="city-life"
+                    data-type="cigarillos"
+                    id="product-92">
+                    <img src="images/products/oip88.webp" alt="city life cigarillos blueberry cream" class="prod-img">
+                    <p class="prod-name">City Life Cigarillos Blueberry Cream</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'City Life Cigarillos Blueberry Cream')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="city-life"
+                    data-type="cigarillos"
+                    id="product-93">
+                    <img src="images/products/oip89.webp" alt="city life cigarillos mango" class="prod-img">
+                    <p class="prod-name">City Life Cigarillos Mango</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'City Life Cigarillos Mango')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="city-life"
+                    data-type="cigarillos"
+                    id="product-94">
+                    <img src="images/products/oip90.webp" alt="city life cigarillos mix berry" class="prod-img">
+                    <p class="prod-name">City Life Cigarillos Mix Berry</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'City Life Cigarillos Mix Berry')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="city-life"
+                    data-type="cigarillos"
+                    id="product-95">
+                    <img src="images/products/oip91.webp" alt="city life cigarillos napa grape" class="prod-img">
+                    <p class="prod-name">City Life Cigarillos Napa Grape</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'City Life Cigarillos Napa Grape')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="city-life"
+                    data-type="cigarillos"
+                    id="product-96">
+                    <img src="images/products/oip92.webp" alt="city life cigarillos green sweet" class="prod-img">
+                    <p class="prod-name">City Life Cigarillos Green Sweet</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'City Life Cigarillos Green Sweet')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="dutch-masters"
+                    data-type="cigarillos"
+                    id="product-97">
+                    <img src="images/products/oip94.webp" alt="dutch masters cigarillos dutch blend 'silver' " class="prod-img">
+                    <p class="prod-name">Dutch Masters Cigarillos Dutch Blend Silver</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Dutch Masters Cigarillos Dutch Blend Silver')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="dutch-masters"
+                    data-type="cigarillos"
+                    id="product-98">
+                    <img src="images/products/oip95.webp" alt="dutch masters cigarillos diamond fusion " class="prod-img">
+                    <p class="prod-name">Dutch Masters Cigarillos Diamond Fusion</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Dutch Masters Cigarillos Diamond Fusion')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="dutch-masters"
+                    data-type="cigarillos"
+                    id="product-99">
+                    <img src="images/products/oip96.webp" alt="dutch masters cigarillos java fusion " class="prod-img">
+                    <p class="prod-name">Dutch Masters Cigarillos Java Fusion</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Dutch Masters Cigarillos Java Fusion')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="dutch-masters"
+                    data-type="cigarillos"
+                    id="product-100">
+                    <img src="images/products/oip97.webp" alt="dutch masters cigarillos sweet fusion " class="prod-img">
+                    <p class="prod-name">Dutch Masters Cigarillos Sweet Fusion</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Dutch Masters Cigarillos Sweet Fusion')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="dutch-masters"
+                    data-type="cigarillos"
+                    id="product-101">
+                    <img src="images/products/oip98.webp" alt="dutch masters cigarillos og fusion " class="prod-img">
+                    <p class="prod-name">Dutch Masters Cigarillos OG Fusion</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Dutch Masters Cigarillos OG Fusion')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="dutch-masters"
+                    data-type="cigarillos"
+                    id="product-102">
+                    <img src="images/products/oip99.webp" alt="dutch masters cigarillos royal haze " class="prod-img">
+                    <p class="prod-name">Dutch Masters Cigarillos Royal Haze</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Dutch Masters Cigarillos Royal Haze')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="dutch-masters"
+                    data-type="cigarillos"
+                    id="product-103">
+                    <img src="images/products/oip100.webp" alt="dutch masters cigarillos berry fusion " class="prod-img">
+                    <p class="prod-name">Dutch Masters Cigarillos Berry Fusion</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Dutch Masters Cigarillos Berry Fusion')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="dutch-masters"
+                    data-type="cigarillos"
+                    id="product-104">
+                    <img src="images/products/oip101.webp" alt="dutch masters cigarillos honey fusion " class="prod-img">
+                    <p class="prod-name">Dutch Masters Cigarillos Honey Fusion</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Dutch Masters Cigarillos Honey Fusion')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="dutch-masters"
+                    data-type="cigarillos"
+                    id="product-105">
+                    <img src="images/products/oip102.webp" alt="dutch masters cigarillos platinum fusion " class="prod-img">
+                    <p class="prod-name">Dutch Masters Cigarillos Platinum Fusion</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Dutch Masters Cigarillos Platinum Fusion')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="dutch-masters"
+                    data-type="cigarillos"
+                    id="product-106">
+                    <img src="images/products/oip103.webp" alt="dutch masters cigarillos gold fusion " class="prod-img">
+                    <p class="prod-name">Dutch Masters Cigarillos Gold Fusion</p>
+                    <p class="stock">Out of Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Dutch Masters Cigarillos Gold Fusion')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="dutch-masters"
+                    data-type="cigarillos"
+                    id="product-107">
+                    <img src="images/products/oip104.webp" alt="dutch masters cigarillos irish fusion " class="prod-img">
+                    <p class="prod-name">Dutch Masters Cigarillos Irish Fusion</p>
+                    <p class="stock">In Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Dutch Masters Cigarillos Irish Fusion')">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="product"
+                    data-brand="dutch-masters"
+                    data-type="cigarillos"
+                    id="product-108">
+                    <img src="images/products/oip105.webp" alt="dutch masters cigarillos green envy " class="prod-img">
+                    <p class="prod-name">Dutch Masters Cigarillos Green Envy</p>
+                    <p class="stock">Out of Stock</p>
+                    <p class="barcode">*ABC123*</p>
+
+                    <div class="qty-box hidden">
+                        <label>Quantity</label>
+                        <input type="number" min="1" value="1" class="qty-input">
+                        <button onclick="addToCart(event, 'Dutch Masters Cigarillos Green Envy')">
+                        Add to Cart
+                        </button>
+                
+            
+            
+     
+
+
+
+
     </section>
     <footer id="footer">
     <a href="index.html">
@@ -168,5 +1919,9 @@
         </ul>
     </nav>
     </footer>
+<script src="script.js"></script>
 </body>
 </html>
+            
+            
+            
